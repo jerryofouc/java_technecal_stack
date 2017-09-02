@@ -121,7 +121,13 @@ semaphore.release()//释放。
         - 当使用ArrayBlockingQueue，则是boundedQueue模式。
 
 
-
+```
+from django.db.backends.mysql import base
+DatabaseWrapper = base.DatabaseWrapper
+def queries_logged():
+    return True
+DatabaseWrapper.queries_logged = queries_logged
+```
     
 
 
